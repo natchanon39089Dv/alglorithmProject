@@ -112,7 +112,7 @@ while True:
         continue
         
         
-    if response == 'no' and response == 'exit':    
+    if response == 'no' or response == 'exit':    
         print("Exiting the program.")
         selected_row = None
         break 
