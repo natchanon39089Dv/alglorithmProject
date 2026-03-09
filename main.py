@@ -35,28 +35,47 @@ def addSubject(enlistedSubject, subjectName, credits, time, day, startTime, endT
 
 #loop
 while True:
-    response = input("\nDo you want to enlist a subject? (yes/no): ").strip().lower()
+    response = input("\nDo you want to enlist a subject? (yes/no/exit): ")
     if response == 'yes':
         print("Enlisting a subject.")
         print("Available Subjects:")
         print(avSubject)
-        
-        enlistingSubject = input("Enter the subject name you want to enlist: ").strip()
+
         while True:
-            if enlistingSubject.lower() in avSubject['subjectName'].str.lower().values:
+            enlistingSubject = input("Enter the subject name you want to enlist: or type 'exit' to quit ): ").strip()
+            if enlistingSubject == "exit":
+                
                 break
-            else:
+            if enlistingSubject.lower() not in avSubject['subjectName'].str.lower().values:
                 print("Invalid subject name. Please enter a valid subject from the available subjects list.")
-                enlistingSubject = input("Enter the subject name you want to enlist: ").strip()
-        
+                
+                continue
+
+            if enlistingSubject in enlistedSubject['subjectName'].values:
+                print("Subject already enlisted. Please choose a different subject.")
+                
+                continue
+                            
+            row = avSubject[avSubject['subjectName'].str.lower() == enlistingSubject.lower()].iloc[0]
+            new_day = row['day']
+            new_start = row['startTime']
+            new_end = row['endTime']
+
+            conflict = False
+
+            for i in range(len(enlistedSubject)):
+                if new_day == enlistedSubject.loc[i, 'day']:
+                    if new_start < enlistedSubject.loc[i, 'endTime'] and enlistedSubject.loc[i, 'startTime'] < new_end:
+                        print("Time conflict detected with an already enlisted subject.")
+                        conflict = True
+                        break
+
+            if conflict:
+                continue
+            break
         
         selected_row = avSubject[avSubject['subjectName'].str.lower() == enlistingSubject.lower()].iloc[0]
-
         
-        
-        
-        selected_row = avSubject[avSubject['subjectName'].str.lower() == enlistingSubject.lower()].iloc[0]
-
         print(f"Selected subject: {selected_row['subjectName']}")
 
         while True:
@@ -73,24 +92,36 @@ while True:
                     selected_row['endTime'],
                     selected_row['lecturer'],
                     selected_row['subjectCode']
+                   
                 )
+                enlistedSubject.to_csv("data/enlistedSubject.csv", index=False)
+                print("Saved changes to CSV file.")
                 break
+            
+
 
             elif commit == 'no':
                 print("Changes not committed.")
+                selected_row = None
                 break
 
             else:
                 print("Invalid input. Please enter 'yes' or 'no'.")
 
         
+        continue
         
         
-        
-        
-    else:
+    if response == 'no' and response == 'exit':    
         print("Exiting the program.")
+        selected_row = None
         break 
+
+    
+    else:
+        print("Invalid input. Please enter 'yes' to continue or 'no' or 'exit' to quit.")
+        selected_row = None
+        break
     
 print("enlisted subjects:")
 print(enlistedSubject)

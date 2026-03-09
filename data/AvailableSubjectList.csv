@@ -1,6 +1,21 @@
 subjectName,credits,time,day,startTime,endTime,lecturer,subjectCode
-Mathematics,3,3,Mon,09:00,12:00,Dr.Smith,01418000
-Physics,3,3,Mon,13:00,16:00,Dr.Johnson,01418001
-Computer Programming,4,4,Tue,09:00,13:00,Prof.David,01418002
-Database Systems,3,3,Mon,10:00,12:00,Ms.Linda,01418003
-English,2,2,Wed,09:00,11:00,Mr.James,01303103
+Operating Systems,0,3,Monday,08:30,11:30,unknown,01418236-65
+Fundamentals of Artificial Intelligence,0,3,Tuesday,12:00,15:00,unknown,01418261-65
+Algorithm Design and Analysis,0,3,Thursday,08:30,11:30,unknown,01418232-65
+Fundamentals of Database Systems,0,3,Friday,08:30,11:30,unknown,01418221-65
+Statistical Programming,0,3,Monday,12:00,15:00,unknown,01418131-65
+Economics for Better Living,0,3,Tuesday,12:00,15:00,unknown,01999041-67
+Basic Linear Algebra,0,3,Wednesday,12:00,15:00,unknown,01417322-65
+Fundamentals of Computing,0,3,Thursday,12:00,15:00,unknown,01418132-65
+Computer Programming,0,3,Friday,08:30,11:30,unknown,01418113-65
+Calculus I,0,3,Wednesday,12:00,15:00,unknown,01417111-65
+English for Job Opportunities,0,2,Tuesday,15:30,17:30,unknown,01355103-64
+Fundamental Programming Concepts,0,3,Monday,08:30,11:30,unknown,01418112-65
+Introduction to Computer Science,0,2,Thursday,12:00,14:00,unknown,01418111-65
+Thai Language for Academic and Professional Communication,0,2,Friday,08:30,10:30,unknown,01999021-67
+Intellectual Properties and Professional Ethics,0,3,Tuesday,12:00,15:00,unknown,01418141-65
+Data Structures and Algorithms,0,3,Monday,08:30,11:30,unknown,01418231-65
+Introduction to Recreation,0,2,Friday,08:30,10:30,unknown,01174231-67
+Information Resources for Research,0,2,Thursday,12:00,14:00,unknown,03752111-67
+Computer Architecture,0,3,Tuesday,08:30,11:30,unknown,01418233-65
+Software Construction,0,3,Friday,08:30,11:30,unknown,01418211-65
