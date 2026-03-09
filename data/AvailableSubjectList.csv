@@ -1,0 +1,6 @@
+subjectName,credits,time,day,startTime,endTime,lecturer,subjectCode
+Mathematics,3,3,Mon,09:00,12:00,Dr.Smith,01418000
+Physics,3,3,Mon,13:00,16:00,Dr.Johnson,01418001
+Computer Programming,4,4,Tue,09:00,13:00,Prof.David,01418002
+Database Systems,3,3,Mon,10:00,12:00,Ms.Linda,01418003
+English,2,2,Wed,09:00,11:00,Mr.James,01303103
